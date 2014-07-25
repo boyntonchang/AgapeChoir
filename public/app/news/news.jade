@@ -1,0 +1,21 @@
+.col-md-10.noMarginL(ng-controller='newsCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-2.subTitle.margin0 NEWS
+		.FloatR
+			a(class='btn btn-default editBtn darkGrayBG' , href='/NewNotice', ng-show='identity.currentUser.isAdmin()') NEW NOTICE
+			.inline.subTitle TOTAL
+			h2.inline.square.darkGrayBG.thinText {{notices.length}}
+	.marginR.height100
+		.media.darkGrayFont.margin0.scale-fade(ng-repeat='notice in notices ')
+			a.pull-left.thumbnailPic(href='/news/{{notice._id}}')
+				img.media-object(ng-src='/images/choirPhoto/{{notice.image}}', style='width: 100%;')
+			a(href='/news/{{notice._id}}')
+				.media-body.media-body-Frame.darkGrayFont
+					h3.media-heading.Ralewayh3 {{notice.title | uppercase}}
+					h5 {{notice.date | date}}
+					small {{notice.report}}
+					p.textP {{notice.content}}
+		.widget-foot
+			.clearfix
+			pagination(total-items='notices.length', num-pages='numPages', items-per-page='itemsPerPage', direction-links='true', max-size='maxSize', page='currentPage', boundary-links='true', ng-model='currentPage')
+			.clearfix

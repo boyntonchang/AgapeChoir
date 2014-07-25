@@ -1,0 +1,41 @@
+.col-md-10.noMarginL(ng-controller='updateMemberCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-4.subTitle.margin0  UPDATE MEMBER
+	form.form-horizontal.col-md-12.darkGrayFont(role="updateForm")
+		.form-group
+			label.col-md-2.control-label(for="name") NAME
+			.col-md-10
+				input#name.form-control.input-sm(type="name", placeholder="name", ng-model="member.name")
+		.form-group
+			label.col-md-2.control-label(for="part") PART
+			.col-md-10
+				input#name.form-control.input-sm(type="part", placeholder="part", ng-model="member.part")
+		.form-group
+			label.col-md-2.control-label(for="email") EMAIL
+			.col-md-10
+				input#email.form-control.input-sm(type="email", placeholder="email", ng-model="member.email")
+		.form-group
+			label.col-md-2.control-label(for="tel") TEL
+			.col-md-10
+				input#tel.form-control.input-sm(type="text", placeholder="tel", ng-model="member.tel")
+		.form-group
+			label.col-md-2.control-label(for="address") ADDRESS
+			.col-md-10
+				input#address.form-control.input-sm(type="text", placeholder="address", ng-model="member.address")
+		.form-group
+			label.col-md-2.control-label(for="dob") DATE OF BIRTH
+			.col-md-10
+				input#dob.form-control.input-sm(type="text", placeholder="yyyy-mm-dd", ng-model="member.dob")
+		.form-group
+			label.col-md-2.control-label(for="doa") STARTING DATE
+			.col-md-10
+				input#dob.form-control.input-sm(type="text", placeholder="yyyy-mm-dd", ng-model="member.doa")
+		.form-group
+			label.col-md-2.control-label(for="comment") COMMENT
+			.col-md-10
+				textarea#comment.form-control.input-sm(rows="3", placeholder="comment", ng-model="member.comment")
+		.form-group
+			label.col-md-2.control-label(for="image") PROFILE PHOTO
+			.col-md-10
+				input#image.form-control.input-sm(type="text", placeholder="image", ng-model="member.image")
+		button.btn.btn-primary.pull-right(type="submit", ng-click="updateMember()") UPDATE

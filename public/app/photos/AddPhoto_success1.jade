@@ -1,0 +1,38 @@
+.col-md-10.noMarginL(ng-controller='addPhotoCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-4.subTitle.margin0 NEW PHOTO
+	
+	form.form-horizontal.col-md-12.darkGrayFont(role="form", action='/upload', method='post', enctype='multipart/form-data')
+		fieldset
+			legend Upload new photo
+			.form-group
+					label.col-md-2.control-label(for="upload") CHOOSE AN IMAGE
+					.col-md-4
+						input#upload.form-control.input-sm(type="file",  name='image')
+					button(type='submit') submit
+			.form-group
+					label.col-md-2.control-label(for="title") TITLE
+					.col-md-4
+						input#title.form-control.input-sm(type='text', ng-model='title')
+			br
+			.err(ng-show='errorMsg != null') {{errorMsg}}
+			br
+			|	Progress:
+			div(ng-show='selectedFiles != null')
+				.sel-file(ng-repeat='f in selectedFiles') {{($index + 1) + '.'}}
+					img(ng-show='dataUrls[$index]', ng-src='{{dataUrls[$index]}}')
+					button.button(ng-click='start($index)')
+					span.progress(ng-show='progress[$index] >= 0')
+						div {{progress[$index]}}%
+					button.button(ng-click='abort($index)', ng-show='hasUploader($index) && progress[$index] < 100')
+						{{f.name}} - size: {{f.size}}B - type: {{f.type}}
+			.response(ng-show='uploadResult.length') Server Response:
+				ul
+					li(ng-repeat='result in uploadResult')
+						ul
+							li(ng-repeat='item in result.result')
+								div(data-ng-show='item.name') file name: {{item.name}}
+								div(data-ng-show='item.fieldName') name: {{item.fieldName}}
+								div(data-ng-show='item.size') size on the serve: {{item.size}}
+								div(data-ng-show='item.value') value: {{item.value}}
+						.reqh(data-ng-show='result.requestHeaders') request headers: {{result.requestHeaders}}

@@ -1,0 +1,14 @@
+.col-md-10.noMarginL(ng-controller='photosCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-2.subTitle.margin0 PHOTO
+		.FloatR
+			a(class='btn btn-default editBtn darkGrayBG' , href='/uploadPhoto', ng-show='identity.currentUser.isAdmin()') UPLOAD PHOTO
+			.inline.subTitle TOTAL
+			h2.inline.square.darkGrayBG.thinText {{photos.length}}
+	.marginR
+		carousel.frameWidth(interval='myInterval')
+			slide(ng-repeat='photo in photos', active='photo.active')
+				img(ng-src="/images/choirPhoto/{{photo.image}}")
+				.carousel-caption
+					//h4 PHOTO GALLERY {{$index}}
+					p.captionText {{photo.title}}

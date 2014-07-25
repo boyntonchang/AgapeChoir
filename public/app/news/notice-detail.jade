@@ -1,0 +1,13 @@
+.col-md-10.noMarginL(ng-controller='noticeDetailCtrl')
+	.heightSM.margin-1.vertAlign.newsDetailBG
+		h2.marginR.subTitle.inline.FloatL NEWS
+		h3.FloatL.inline {{notice.date | date}}
+		a(class='btn btn-default editBtn darkGrayBG pull-right' , href='/news/updateNotice/{{notice._id}}', ng-show='identity.currentUser.isAdmin()', ng-click='editNotice()') EDIT
+		a(class='btn btn-default editBtn darkGrayBG pull-right' , href='', ng-show='identity.currentUser.isAdmin()', ng-click='deleteNotice()') DELETE
+	.margin-1.media.overflowAuto.darkGrayFont
+		h3.Ralewayh3.marginBottom-20 {{notice.title | uppercase}}
+		small.reportName {{notice.report}}
+		br
+		br
+		img.media-object.thumbnail.pull-left.marginR-2.col-md-6(ng-src='/images/choirPhoto/{{notice.image}} ')
+		p.textP{{notice.content}}

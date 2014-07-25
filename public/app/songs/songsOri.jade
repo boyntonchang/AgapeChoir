@@ -1,0 +1,31 @@
+div.col-md-10.noMarginL(ng-controller='songsListCtrl')
+  div.gray.heightSM.margin-1.vertAlign
+    h2.col-md-2.subTitle.margin0 SONGS
+    div.FloatR
+      a(class='btn btn-default editBtn darkGrayBG' , href='/AddSong', ng-show='identity.currentUser.isAdmin()') Add Song
+      div.inline.subTitle TOTAL
+      h2.inline.square.darkGrayBG.thinText {{songs.length}}
+  div.marginR.height100
+    table.table.table-bordered.table-hover
+      thead
+        tr.darkBlue
+          th.text-center DATE
+          th.text-center SONG TITLE
+          th.text-center WATCH VIDEO
+          th(class='text-center' ng-show='identity.currentUser.isAdmin()') EDIT
+      tbody.text-center.darkGrayFont
+        tr(ng-repeat='song in songs.slice().reverse()')
+          td(style='text-align:left;padding-left:4em;') {{song.date | date:'MM-dd-yyyy' }}
+          td {{song.title}}
+          td
+            span(ng-show='identity.currentUser.isAdmin()')
+              {{song.vPath}}
+            a.fancybox-media(href='{{song.vPath}}' ng-hide='identity.currentUser.isAdmin()')
+              span.glyphicon.glyphicon-play-circle
+          td(ng-show='identity.currentUser.isAdmin()')
+            a(class='btn btn-default editBtn darkGrayBG' , href='', ng-click=' ' ) Edit
+            a(class='btn btn-default editBtn darkGrayBG' , href='', ng-click='deleteSong()' ) Delete
+    div.widget-foot
+      div.clearfix
+      pagination(total-Items='songs.length', num-pages='numPages', items-per-page='itemsPerPage', direction-links='true', max-size='maxSize', page='currentPage', boundary-links='true', ng-model='currentPage')
+      div.clearfix

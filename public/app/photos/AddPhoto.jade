@@ -1,0 +1,18 @@
+.col-md-10.noMarginL(ng-controller='addPhotoCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-4.subTitle.margin0 ADD TO GALLERY
+	
+	form.form-horizontal.col-md-12.darkGrayFont(role="form")
+		fieldset
+			legend Add photo to gallery
+			.form-group
+					label.col-md-2.control-label(for="upload") FILE NAME
+					.col-md-4
+						input#upload.form-control.input-sm(type="text",  ng-model='image', placeholder='xxx.png, xxx.jpg')
+			.form-group
+					label.col-md-2.control-label(for="title") TITLE
+					.col-md-4
+						input#title.form-control.input-sm(type='text', ng-model='title')
+			br
+			.col-md-6
+				button.col-md-2.pull-right(type='submit', ng-click='addPhoto()') SUBMIT

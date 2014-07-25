@@ -1,0 +1,25 @@
+.col-md-10.noMarginL(ng-controller='updateNoticeCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-4.subTitle.margin0  UPDATE NOTICE
+	form.form-horizontal.col-md-12.darkGrayFont(role="form")
+		.form-group
+			label.col-md-2.control-label(for="date") DATE
+			.col-md-10
+				input#name.form-control.input-sm(type="text", placeholder="yyyy-mm-dd", ng-model="notice.date ")
+		.form-group
+			label.col-md-2.control-label(for="title") TITLE
+			.col-md-10
+				input#email.form-control.input-sm(type="text", placeholder="title", ng-model="notice.title")
+		.form-group
+			label.col-md-2.control-label(for="report") REPORT
+			.col-md-10
+				input#tel.form-control.input-sm(type="text", placeholder="Report", ng-model="notice.report")
+		.form-group
+			label.col-md-2.control-label(for="content") CONTENT
+			.col-md-10
+				textarea#comment.form-control.input-sm(rows="5", placeholder="content", ng-model="notice.content")
+		.form-group
+			label.col-md-2.control-label(for="image")  PHOTO
+			.col-md-10
+				input#image.form-control.input-sm(type="text", placeholder="image", ng-model="notice.image")
+		button.btn.btn-primary.pull-right(type="submit", ng-click="updateNotice()") UPDATE

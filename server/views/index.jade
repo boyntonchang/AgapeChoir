@@ -1,0 +1,38 @@
+extends ../includes/layout
+
+block main-content
+	header.darkGrayBg
+		.container.headerContainer
+			h3.col-md-6.MainTitle
+				|	PILGRIM AGAPE CHOIR
+				small Choir for Open Service
+			div(ng-include="'/partials/account/navbar-login'")
+	.row.fullHeight
+		nav#vertNav.col-md-2.darkGrayBG.text-center
+			ul
+				li
+					a(href='/')
+						span.glyphicon.glyphicon-home.widthFull
+						|	HOME
+				li
+					a(href='/members')
+						span.glyphicon.glyphicon-user.widthFull
+						|	MEMBERS
+				li
+					a(href='/songs')
+						span.glyphicon.glyphicon-music.widthFull
+						|	SONGS
+				li
+					a(href='/news')
+						span.glyphicon.glyphicon-bullhorn.widthFull
+						|	NEWS
+				li
+					a(href='/photos')
+						span.glyphicon.glyphicon-camera.widthFull
+						|	PHOTOS
+				li
+					a(href='/stats')
+						span.glyphicon.glyphicon-signal.widthFull
+						|	STATS
+		div(ng-view)
+	

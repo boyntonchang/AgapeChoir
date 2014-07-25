@@ -1,0 +1,7 @@
+.col-md-10.noMarginL(ng-controller='statsCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-2.subTitle.margin0 STATS
+	.marginR
+		highchart#chart1.col-md-12.well(config='chartConfig')
+		highchart#chart2.col-md-3.well.donut(config='chartConfig2')
+		highchart#chart3.barChart.well.pull-right(config='chartConfig3')

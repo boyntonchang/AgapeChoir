@@ -1,0 +1,28 @@
+.col-md-10.noMarginL(ng-controller='memberDetailCtrl')
+  .heightSM.margin-1.vertAlign.memberBG
+    h2.marginR.subTitle.inline.FloatL {{member.name | uppercase}} 
+    h3.FloatL.inline {{member.part | uppercase}}
+    a(class='btn btn-default editBtn darkGrayBG pull-right' , href='/members/updateMember/{{member._id}}', ng-show='identity.currentUser.isAdmin()', ng-click='editPage()') EDIT
+    a(class='btn btn-default editBtn darkGrayBG pull-right' , href='', ng-show='identity.currentUser.isAdmin()', ng-click='deleteMember()') DELETE
+  .media
+    .pull-left
+      img.media-object(ng-src="/images/memberPhoto/{{member.image}} ", alt="...")
+    .margin-1.overflowAuto.marginTop
+      .FloatL.frameGray
+        h3.inline.marginR-2.Ralewayh3 ADDRESS
+        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.address}}
+      .FloatL.frameGray
+        h3.inline.marginR-2.Ralewayh3 BIRTHDAY
+        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.dob | date:'MM-dd-yyyy'}}
+      .FloatL.frameGray
+        h3.inline.marginR-2.Ralewayh3 STARTING DATE
+        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.doa | date:'MM-dd-yyyy'}}
+      .FloatL.frameGray
+        h3.inline.marginR-2.Ralewayh3 EMAIL
+        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.email}}
+      .FloatL.frameGray
+        h3.inline.marginR-2.Ralewayh3 TEL
+        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.tel}}
+    .well.comment.col-md-offset-2.text-center
+      p.commentText
+        q {{member.comment}}

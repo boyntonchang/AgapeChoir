@@ -1,0 +1,16 @@
+.col-md-10.noMarginL(ng-controller='addPhotoCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-4.subTitle.margin0 NEW PHOTO
+	
+	form.form-horizontal.col-md-12.darkGrayFont(role="form")
+		fieldset
+			legend Upload new photo
+			.form-group
+					label.col-md-2.control-label(for="upload") CHOOSE AN IMAGE
+					.col-md-4
+						input#upload.form-control.input-sm(type="file",  ng-file-select="onFileSelect($files)")
+					button(ng-click="upload.abort()") Cancel Upload
+			.form-group
+					label.col-md-2.control-label(for="title") TITLE
+					.col-md-4
+						input#title.form-control.input-sm(type='text', ng-model='title')

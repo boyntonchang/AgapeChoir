@@ -1,0 +1,61 @@
+
+.col-md-10.noMarginL(ng-controller='membersCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-2.subTitle.margin0 MEMBERS
+		.FloatR
+			a(class='btn btn-default editBtn darkGrayBG' , href='/AddMember', ng-show='identity.currentUser.isAdmin()') ADD MEMBER
+			.inline.subTitle TOTAL
+			h2.inline.square.darkGrayBG.thinText {{members.length}}
+	.marginR.height100
+		ul#tabs.nav.nav-tabs
+			li.active
+				a(data-target='#soprano', data-toggle='tab')
+					| SOPRANO
+			li
+				a(data-target='#alto', data-toggle='tab')
+					| ALTO
+			li
+				a(data-target='#tenor', data-toggle='tab')
+					| TENOR
+			li
+				a(data-target='#bass', data-toggle='tab')
+					| BASS
+		.tab-content
+			#soprano.tab-pane.active.columnCount
+				ul.caption-style-2
+					li(ng-repeat='member in members | filter:{part:"soprano"}')
+						a(href='/members/{{member._id}}')
+							img(ng-src='/images/memberPhoto/{{member.image}}')
+						.caption
+							.blur
+							.caption-text
+								h1 {{member.name}}
+			#alto.tab-pane
+				ul.caption-style-2
+					li(ng-repeat='member in members | filter:{part:"alto"}')
+						a(href='/members/{{member._id}}')
+							img(ng-src='/images/memberPhoto/{{member.image}} ')
+						.caption
+							.blur
+							.caption-text
+								h1 {{member.name}}
+			#tenor.tab-pane
+				ul.caption-style-2
+					li(ng-repeat='member in members | filter:{part:"tenor"}')
+						a(href='/members/{{member._id}}')
+							img(ng-src='/images/memberPhoto/{{member.image}} ')
+						.caption
+							.blur
+							.caption-text
+								h1 {{member.name}}
+			#bass.tab-pane
+				ul.caption-style-2
+					li(ng-repeat='member in members | filter:{part:"bass"}')
+						a(href='/members/{{member._id}}')
+							img(ng-src='/images/memberPhoto/{{member.image}} ')
+						.caption
+							.blur
+							.caption-text
+								h1 {{member.name}}
+      
+

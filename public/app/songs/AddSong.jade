@@ -1,0 +1,18 @@
+.col-md-10.noMarginL(ng-controller='addSongCtrl')
+	.gray.heightSM.margin-1.vertAlign
+		h2.col-md-4.subTitle.margin0  NEW SONG
+	form.form-horizontal.col-md-12.darkGrayFont(role="form")
+		.form-group
+			label.col-md-2.control-label(for="date") DATE
+			.col-md-10
+				input#date.form-control.input-sm(type="date", placeholder="Date", ng-model="date")
+		.form-group
+			label.col-md-2.control-label(for="title") TITLE
+			.col-md-10
+				input#title.form-control.input-sm(type="TEXT", placeholder="title", ng-model="title")
+		.form-group
+			label.col-md-2.control-label(for="vPath") VIDEO PATH
+			.col-md-10
+				input#vPath.form-control.input-sm(type="text", placeholder="Video Path", ng-model="vPath")
+		
+		button.btn.btn-primary.pull-right(type="submit", ng-click="addSong()") ADD
