@@ -1,10 +1,15 @@
 {
-  "name": "DB-PILGRIM",
+  "name": "AgapeChoir",
   "version": "0.0.0",
   "description": "",
   "main": "server.js",
   "dependencies": {
     "express": "~4.3.0",
+	"morgan":"~1.2.1",
+	"body-parser":"~1.5.1",
+	"express-session":"~1.7.1",
+	"cookie-parser":"~1.3.2",
+	"connect-multiparty":"~1.1.0",
     "bower": "~1.3.3",
     "jade": "~1.3.1",
     "mongoose": "~3.8.11",
