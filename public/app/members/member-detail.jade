@@ -1,28 +1,28 @@
-.col-md-10.noMarginL(ng-controller='memberDetailCtrl')
+.col-lg-10.col-md-10.col-sm-12.heightMax.padding-0.noMarginL(ng-controller='memberDetailCtrl')
   .heightSM.margin-1.vertAlign.memberBG
     h2.marginR.subTitle.inline.FloatL {{member.name | uppercase}} 
-    h3.FloatL.inline {{member.part | uppercase}}
+    h3.FloatL.inline.part {{member.part | limitTo:1 | uppercase}}
     a(class='btn btn-default editBtn darkGrayBG pull-right' , href='/members/updateMember/{{member._id}}', ng-show='identity.currentUser.isAdmin()', ng-click='editPage()') EDIT
-    a(class='btn btn-default editBtn darkGrayBG pull-right' , href='', ng-show='identity.currentUser.isAdmin()', ng-click='deleteMember()') DELETE
+    a(class='btn btn-default editBtn darkGrayBG pull-right' , href='', ng-show='identity.currentUser.isAdmin()', ng-click='deleteMember()') DEL
   .media
-    .pull-left
+    .pull-left.marginL-1
       img.media-object(ng-src="/images/memberPhoto/{{member.image}} ", alt="...")
     .margin-1.overflowAuto.marginTop
       .FloatL.frameGray
         h3.inline.marginR-2.Ralewayh3 ADDRESS
-        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.address}}
+        h4.inline.lineheightHalf.Ralewayh4.text-right {{member.address}}
       .FloatL.frameGray
         h3.inline.marginR-2.Ralewayh3 BIRTHDAY
-        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.dob | date:'MM-dd-yyyy'}}
+        h4.inline.lineheightHalf.Ralewayh4 {{member.dob | date:'MM-dd-yyyy'}}
       .FloatL.frameGray
-        h3.inline.marginR-2.Ralewayh3 STARTING DATE
-        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.doa | date:'MM-dd-yyyy'}}
+        h3.inline.marginR-2.Ralewayh3 JOIN DATE
+        h4.inline.lineheightHalf.Ralewayh4 {{member.doa | date:'MM-dd-yyyy'}}
       .FloatL.frameGray
         h3.inline.marginR-2.Ralewayh3 EMAIL
-        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.email}}
+        h4.inline.lineheightHalf.Ralewayh4 {{member.email}}
       .FloatL.frameGray
         h3.inline.marginR-2.Ralewayh3 TEL
-        h4.inline.FloatR.lineheightHalf.Ralewayh4 {{member.tel}}
-    .well.comment.col-md-offset-2.text-center
+        h4.inline.lineheightHalf.Ralewayh4 {{member.tel}}
+    .well.comment.text-center.marginAuto
       p.commentText
         q {{member.comment}}

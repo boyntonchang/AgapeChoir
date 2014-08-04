@@ -1,6 +1,6 @@
 	/* Styles go here */
 	
-	body {
+	html, body {
 	  color:#f2f2f2;
 	  margin-top:0;
 	  min-height: 100%;
@@ -58,7 +58,7 @@
 	
 	.margin-1 {
 	  
-	  margin:0.5em 0.5em 0.5em 0;
+	  margin:0em 0em 0.5em 0em;
 	}
 	
 	.gray {
@@ -73,7 +73,7 @@
 	}
 	.heightSM {
 	  
-	  height:70px;
+	  height:4.5em;
 	  
 	}
 	.inline {
@@ -87,13 +87,20 @@
 	}
 	
 	.marginR {
-	  margin-right:.5em;
+	  margin-right:1em;
+	}
+	.margin-half{
+		margin-left:0.5em;
+		margin-right:0.5em;
 	}
 	.marginR-2{
 		margin-right:2em;	
 	}
 	.margin0{
 	  margin:0;
+	}
+	.marginL-1{
+	margin-left:1em;
 	}
 	.marginTop{
 		margin-top:0;
@@ -105,6 +112,7 @@
 	  padding-left:5px;
 	  padding-right:5px;
 	  width:80px;
+	  margin-right:0.5em;
 	  
 	}
 	.squareSM{
@@ -116,8 +124,13 @@
 	  color:#f2f2f2;
 	}
 	.height100{
-		height:auto;
-		overflow:auto;
+		height:100%;
+		overflow:hidden;
+		bottom:0;
+	}
+	.heightMax{
+		height:800px;
+		
 	}
 	.margin-bottom-list{
 		margin-bottom:1em;
@@ -130,18 +143,44 @@
 	button{
 		margin-left:5px;
 	}
+	.row{
+	margin-left:0;
+	margin-right:0;
 	
+	}
 	.noRadius{
 		border-radius:0px;
 		margin-top:15px;
 		margin-right:15px;
 		}
 
+	.fullHeight{
+	height:800px;
+	}
+	
+	.padding-0{
+	   
+					padding-left:0;
+					padding-right:0;
+	}
+
+	div#preloader{
+		position:fixed;
+		left:0;
+		top:0;
+		z-index:999;
+		width:100%;
+		height:100%;
+		overflow:visible;
+		background:#333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center;
+	}
+	
+	
 	
 	
 	/*--------nav---------*/
 	nav {
-	  height:100%;
+	 /*  height:100%; */
 	  position:relative;
 	  padding-top:40px;
 	  /* padding-bottom:-100px; */
@@ -149,35 +188,43 @@
 	  
 	}
 	#vertNav{
-		height:800px;
+		/* height:800px; */
 	
 	}
-	#vertNav ul {
+	.vertAlign ul {
 	  margin-left:-10px;
 	}
-	#vertNav ul li {
+	.vertAlign ul li {
 	  margin-bottom:10px;
 	  list-style:none;
 	}
-	#vertNav ul li a {
+	.vertAlign ul li a {
 	  display:block;
 	  color:#f2f2f2;
 	  padding-top:20px;
 	  padding-bottom:20px;
 	}
 	
-	#vertNav ul li a:hover {
+	.vertAlign ul li a:hover {
 	  
 	  color:#f2f2f2;
-	  background-color:#F15A24;
+	  background-color:#b3b3b3;
 	  text-decoration:none;
 	}
 	
+	.vertAlign ul li a.active{
+	  color:#f2f2f2;
+	  background-color:#F15A24;
+	  text-decoration:none;
+	} 
+	.navbar{
+	border-radius:0;
+	}
 	
 	
 	.vertAlign{
 	  
-	  padding:1.3em;
+	  padding:1.3em 0 0 2em ;
 	}
 	
 	.subTitle{
@@ -197,18 +244,34 @@
 	border:none;	
 	}
 	
+	h3.part{
+		padding:5px;
+		background-color:transparent;
+		border:thin solid white;
+	}
+	h3.FloatL.inline{
+		font-size:1.5em;
+	}
+
+
+
+	
 	/*     login form*/
 	.smBtn{
-		width:80px;
+		width:20%;
 	}
 	
 	body .marginTop-1 > .form-group{
 	
-		width:140px;
+		width:28%;
 	}
 	.button{
 		margin-left:5px;
 	}
+
+	
+	
+	
 	/*     home*/
 	.jumbotron{
 		color:#2d2d2d;
@@ -217,13 +280,22 @@
 		margin-top:30px;
 	}
 	
+	
+	
+
 	/* ---------------Main Home------------------ */
 	
+
+	
+	
+
 	.MainHome{
 	background-image:url('../images/agapeLogo.png');
-	background-position:center;
-	width:80%;
-	height:400px;
+	background-position:50% 20%;
+	background-repeat:no-repeat;
+	/* background-size:100%; */
+	width:100%;
+	height:60%;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:5em;
@@ -245,7 +317,7 @@
 	
 	.nav-tabs > li.active > a,
 	.nav-tabs > li.active > a:focus {
-		margin-right:15px;
+		/* margin-right:15px; */
 	   
 		-webkit-border-radius: 0;
 	  -moz-border-radius: 0;
@@ -267,7 +339,7 @@
 	  -webkit-border-radius: 0;
 	  -moz-border-radius: 0;
 	  border-radius: 0;
-		margin-right:15px;
+		/* margin-right:15px; */
 	  background-color:#6badc9;
 	  color:#f2f2f2;
 	  text-align:center;
@@ -282,6 +354,8 @@
 	
 	
 	}
+	
+	
 /* photo*/
 	.caption-style-2{
 		list-style-type: none;
@@ -367,6 +441,9 @@
 		
 	}
 	
+
+	
+	
 	/*-------address---------*/
 	.frameGray{
 		margin-bottom:	0;
@@ -384,16 +461,28 @@
 	.Ralewayh4{
 	  	font-family: 'Raleway', sans-serif;
 		font-weight:400;	
+		float:right;
 	}
-	/*-----comment-----*/
 	
+	
+
+	/*-----comment-----*/
+	.marginAuto{
+		margin:0 auto;
+	
+	}
 	.comment{	
-		width:70%;
+		width:97%;
+		
 	}
 	.commentText{
 		font-size:	1.5em;
-		color:black;
-		
+		color:rgba(65,65,65,1);
+		font-style:italic;
+	}
+	
+	div.media > .well{
+		padding:0;
 	}
 	
 	q:before { 
@@ -409,13 +498,21 @@
 		font-family: Times New Roman; 
 		}
 		
+		/*-----------songs--------------*/
+
+		
+		
+		
+		
 	/*------------news ---------------*/
 
-	
+	.media-object{
+		width:100%;
+	}
 	
 	.media-body-Frame{
 		height:166px;
-		padding:1em;
+		padding:0 0.5em 0 0.5em;
 		/*background-color:#e2e2e2;*/
 		border-bottom:thin dotted gray;
 		text-decoration:none;
@@ -450,9 +547,16 @@
 	font-size:1.2em;
 	
 	}
+	.textP_detail{
+	font-size:1.2em;
+	
+	}
 	
 	.marginBottom-20{
 	margin-bottom:20;
+	}
+	.margin-2{
+		margin-left:0.5em;
 	}
 	/*--------chart------*/
 	
@@ -471,11 +575,14 @@
 		height:18em;
 		width:69%;	
 	}
+	div#chart1.well{
+		margin-bottom:10px;
+	}
 	
 	/*---------------photo-----------------*/
 	
 	.carousel-caption{
-		 max-width: 800px;
+		 max-width: 100%;
 		 height:50px;
 		  /* padding: 0 20px; */
 		  margin:0 auto;
@@ -505,9 +612,10 @@
 	}
 	
 	.frameWidth{
-	width:800px;
-	height:533px;
+	width:90%;
+	/* height:533px; */
 	margin:0 auto;
+	max-width:800px;
 	}
 	.captionText{
 		font-size:1.2em;
@@ -560,7 +668,15 @@
 	
 	.gridStyle {
     border: 1px solid rgb(212,212,212);
-	height:100%;
-  
+	height:510px;
+	width:100%;
 	color:gray;
+}
+
+
+/*---------------ng-grid-----------------*/
+
+.cellPadding{
+padding-top:5px;
+text-align:center;
 }

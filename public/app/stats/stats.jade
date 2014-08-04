@@ -1,7 +1,10 @@
-.col-md-10.noMarginL(ng-controller='statsCtrl')
+.col-lg-10.col-md-10.col-sm-12.heightMax.padding-0.noMarginL(ng-controller='statsCtrl')
 	.gray.heightSM.margin-1.vertAlign
-		h2.col-md-2.subTitle.margin0 STATS
-	.marginR
+		h2.col-sm-2.subTitle.margin0 STATS
+	.margin-half
 		highchart#chart1.col-md-12.well(config='chartConfig')
-		highchart#chart2.col-md-3.well.donut(config='chartConfig2')
-		highchart#chart3.barChart.well.pull-right(config='chartConfig3')
+		
+		.col-md-12.padding-0
+			.row
+				highchart#chart2.col-md-4.col-sm-12.well.donut(config='chartConfig2')
+				highchart#chart3.barChart.col-md-8.col-sm-6.pull-right.well(config='chartConfig3')

@@ -1,11 +1,14 @@
-.navbar-right(ng-controller="navBarLoginCtrl")
-	form.form-inline.marginTop-1(ng-hide='identity.isAuthenticated()')
-		.form-group
-			input.form-control(type='text', ng-model='username', placeholder='username')
-		.form-group
-			input.form-control(type='password', ng-model='password', placeholder='password')
-		button.btn.btn-primary(type='submit', ng-click="signin(username, password)") Log In
-		a(class='button btn btn-info smBtn' href='/signup') Sign Up
+.navbar-right.responsiveMedium.padding-0(ng-controller="navBarLoginCtrl")
+	.navbar-header(ng-hide='identity.isAuthenticated()')
+		button.navbar-toggle(type='button', data-toggle='collapse', data-target='#loginForm') SIGN-IN
+	div#loginForm.navbar-collapse.collapse
+		form.form-inline.navbar-form.marginTop-1.padding-0(ng-hide='identity.isAuthenticated()')
+			.form-group
+				input.form-control(type='text', ng-model='username', placeholder='username')
+			.form-group
+				input.form-control(type='password', ng-model='password', placeholder='password')
+			button.btn.btn-primary(type='submit', ng-click="signin(username, password)") Log In
+			a(class='button btn btn-info smBtn ' href='/signup') Sign Up
 	ul.nav.navbar-nav.navbar-right(ng-show='identity.isAuthenticated()')
 		li.dropdown
 			a.dropdown-toggle(href="", data-toggle='dropdown')

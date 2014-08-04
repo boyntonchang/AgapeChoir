@@ -40,7 +40,7 @@ module.exports = function(app){
 	app.post('/upload', photos.uploadPhoto);
 	
 	app.get('/partials/*', function(req, res){
-	res.render('../../public/app/' + req.params);
+	res.render('../../public/app/' + req.params[0]);
 	});
 	
 	app.post('/login', auth.authenticate);

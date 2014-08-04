@@ -47,7 +47,7 @@ exports.showPhoto = function(req, res){
 	console.log('show image');
 	file = req.params.file;
 	var img = fs.readFileSync(__dirname + "/../../public/images/choirPhoto/" + file);
-	res.writeHead(200, {'Content-Type': 'image/png' });
+	res.writeHead(200, {'Content-Type': 'image/*' });
 	res.write(img, 'binary');
 };
 

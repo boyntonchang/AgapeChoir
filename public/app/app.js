@@ -1,4 +1,4 @@
-var app=angular.module('app',['ngResource','ngRoute', 'ui.bootstrap', ,'highcharts-ng', 'angularFileUpload']);
+var app=angular.module('app',['ngResource','ngRoute', 'ui.bootstrap', ,'highcharts-ng', 'ngGrid']);
 app.config(function($routeProvider, $locationProvider){
 	var routeRoleChecks = {
 		admin:{

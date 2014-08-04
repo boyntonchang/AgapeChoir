@@ -1,12 +1,12 @@
 
-.col-md-10.noMarginL(ng-controller='membersCtrl')
+.col-lg-10.col-md-10.col-sm-12.heightMax.noMarginL.padding-0(ng-controller='membersCtrl')
 	.gray.heightSM.margin-1.vertAlign
-		h2.col-md-2.subTitle.margin0 MEMBERS
+		h2.col-sm-2.col-xs-2.subTitle.margin0.padding-0 MEMBERS
 		.FloatR
-			a(class='btn btn-default editBtn darkGrayBG' , href='/AddMember', ng-show='identity.currentUser.isAdmin()') ADD MEMBER
+			a(class='btn btn-default editBtn darkGrayBG' , href='/AddMember', ng-show='identity.currentUser.isAdmin()') ADD
 			.inline.subTitle TOTAL
 			h2.inline.square.darkGrayBG.thinText {{members.length}}
-	.marginR.height100
+	.margin-half.height100
 		ul#tabs.nav.nav-tabs
 			li.active
 				a(data-target='#soprano', data-toggle='tab')
