@@ -20,6 +20,7 @@ module.exports = function(app){
 	app.get('/api/members/:id', members.getMemberById);
 	app.put('/api/members/:id', members.updateMember);
 	app.post('/api/members', members.createMember);
+	app.post('/uploadMemberPic', members.uploadMemberPic);
 	app.delete('/api/members/:id', members.deleteMember);
 	
 	app.get('/api/songs', songs.getSongs);

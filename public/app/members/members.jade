@@ -3,6 +3,7 @@
 	.gray.heightSM.margin-1.vertAlign
 		h2.col-sm-2.col-xs-2.subTitle.margin0.padding-0 MEMBERS
 		.FloatR
+			a(class='btn btn-default editBtn darkGrayBG' , href='/uploadMemberPhoto', ng-show='identity.currentUser.isAdmin()') UPLOAD
 			a(class='btn btn-default editBtn darkGrayBG' , href='/AddMember', ng-show='identity.currentUser.isAdmin()') ADD
 			.inline.subTitle TOTAL
 			h2.inline.square.darkGrayBG.thinText {{members.length}}

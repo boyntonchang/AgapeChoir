@@ -24,8 +24,6 @@ module.exports = function(app,config){
 		app.use(passport.session());
 		app.use(express.static(config.rootPath + '/public'));
 		app.use(multipart());
-		
-		
 
-}
-        
+};
+

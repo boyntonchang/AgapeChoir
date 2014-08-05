@@ -1,4 +1,6 @@
 angular.module('app').controller('addMemberCtrl', function($scope, mvNotifier, newMember, $location, mvUser, mvIdentity){
+	$scope.members = paMember.query();
+
 	$scope.addMember = function(){
 	
 		var newMemberData = {

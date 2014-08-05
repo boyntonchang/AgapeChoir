@@ -160,7 +160,10 @@
 				
 				/* float:left; */
 			}
-				
+			.dropdown-menu > li > a {
+			
+				color:#fff;
+			}	
 		
 	}
 	

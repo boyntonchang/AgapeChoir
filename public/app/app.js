@@ -42,6 +42,10 @@ app.config(function($routeProvider, $locationProvider){
 			{templateUrl:'/partials/members/updateMember',
 			controller:'updateMemberCtrl'}
 		)
+		.when('/uploadMemberPhoto',
+			{templateUrl:'/partials/members/uploadMemberPhoto',
+			controller:'uploadMemberPhotoCtrl'}
+		)
 		.when('/songs', 
 			{templateUrl:'partials/songs/songs',
 			controller:'songsListCtrl'}

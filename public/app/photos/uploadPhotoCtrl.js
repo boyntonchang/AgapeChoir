@@ -1,4 +1,4 @@
-angular.module('app').controller('uploadPhotoCtrl', function($scope,$http, $upload, newPhoto, $timeout, mvNotifier, mvIdentity, mvAuth, mvUser){
+angular.module('app').controller('uploadPhotoCtrl', function($scope,$http, newPhoto, $timeout, mvNotifier, mvIdentity, mvAuth, mvUser){
 	$scope.identity = mvIdentity;
 
 	$scope.fileChange = function(){

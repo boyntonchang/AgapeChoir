@@ -1,4 +1,6 @@
-var Member = require('mongoose').model('Member');
+var Member = require('mongoose').model('Member'),
+						fs = require('fs'),
+						path=require('path');
 
 exports.getMembers = function(req, res){
 	Member.find({}).exec(function(err, collection){
@@ -61,5 +63,37 @@ exports.updateMember = function(req, res){
 		res.send(memberUpdate);
 	})
 
+
+};
+
+exports.uploadMemberPic = function (req, res) {
+
+
+   fs.readFile(req.files.image.path, function (err, data) {
+		console.log('test');
+		var imageName = req.files.image.name;
+		
+		//If there's an error
+		if(!imageName){
+
+			console.log("There was an error")
+			res.redirect("/");
+			res.end();
+
+		} else {
+
+		  var newPath = __dirname + "/../../public/images/memberPhoto/" + imageName;
+		//console.log(newPath);
+		  //write file to uploads/fullsize folder
+		  fs.writeFile(newPath, data, function (err) {
+
+		  	// let's see it
+		  	//res.redirect("/images/choirPhoto/" + imageName);
+		res.redirect('/AddMember');
+		  });
+		}
+	});
+
+    
 
 };
