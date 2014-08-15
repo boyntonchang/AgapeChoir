@@ -16,7 +16,7 @@ module.exports = function(app,config){
 		app.set('view engine', 'jade');
 		app.use(morgan('dev'));
 		app.use(cookieParser());
-		app.use(bodyParser({uploadDir:'C:/uploadFile'}));
+		app.use(bodyParser({uploadDir:'C:/Temp'}));
 		//app.use(bodyParser({uploadDir:'C:/uploadFile'}));
 		//app.use(express.bodyParser());
 		app.use(session({secret:'Dashboard'}));

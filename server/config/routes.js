@@ -40,6 +40,8 @@ module.exports = function(app){
 	app.post('/api/photos', photos.createPhoto);
 	app.post('/upload', photos.uploadPhoto);
 	
+	//app.get('/fileList', members.fileList)
+	
 	app.get('/partials/*', function(req, res){
 	res.render('../../public/app/' + req.params[0]);
 	});

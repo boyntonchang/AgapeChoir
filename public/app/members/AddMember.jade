@@ -44,3 +44,9 @@
 			.col-md-10
 				input#image.form-control.input-sm(type="text", placeholder="image", ng-model="image")
 		button.btn.btn-primary.pull-right(type="submit", ng-click="addMember()") ADD
+		button.btn.btn-primary(ng-click='isCollapsed = !isCollapsed') IMAGE LIST
+		hr
+		div(collapse='isCollapsed')
+			ul
+				li.inline.marginL-1
+					

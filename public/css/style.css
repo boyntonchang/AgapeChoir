@@ -545,7 +545,10 @@
 	
 	.textP{
 	font-size:1.2em;
-	
+	margin-top:10px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 	}
 	.textP_detail{
 	font-size:1.2em;

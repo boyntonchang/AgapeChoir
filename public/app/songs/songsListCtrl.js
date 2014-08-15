@@ -73,14 +73,14 @@ angular.module('app').controller('songsListCtrl', function($scope, mvIdentity, p
 		pagingOptions:$scope.pagingOptions,
 		columnDefs:[
 			
-			/* {field:'date', cellClass:'cellPadding', displayName:'DATE', cellFilter:"date:'\MM/dd/yyyy\'", width:'10%'},
+			{field:'date', cellClass:'cellPadding', displayName:'DATE', cellFilter:"date:'\MM/dd/yyyy\'", width:'10%'},
 			{field:'title', displayName:'TITLE', cellClass:'cellPadding', width:'35%'},
 			{field:'vPath', displayName:'WATCH VIDEO', cellClass:'cellPadding', cellTemplate:'<div><span ng-show="identity.currentUser.isAdmin()">{{row.entity.vPath}}</span><a class="fancybox-media" href="{{row.entity.vPath}}" ng-hide="identity.currentUser.isAdmin()"><span class="glyphicon glyphicon-play-circle"></span></a></div>', width:'35%'},
-			{displayName:'MANAGE', cellTemplate:'<div ng-show="identity.currentUser.isAdmin()"><a class="btn btn-default darkGrayBG editBtn" href="/songs/updateSong/{{row.entity._id}}" >Edit</a><a class="btn btn-default darkGrayBG editBtn" href="" ng-click="deleteSong($index,row)" >DELETE</a></div>', width:'20%', cellClass:'cellPadding' } */
-			  {field:'date', cellClass:'cellPadding', displayName:'DATE', cellFilter:"date:'\MM/dd/yyyy\'", width:'150'},
+			{displayName:'MANAGE', cellTemplate:'<div ng-show="identity.currentUser.isAdmin()"><a class="btn btn-default darkGrayBG editBtn" href="/songs/updateSong/{{row.entity._id}}" >Edit</a><a class="btn btn-default darkGrayBG editBtn" href="" ng-click="deleteSong($index,row)" >DELETE</a></div>', width:'20%', cellClass:'cellPadding' } 
+			/* {field:'date', cellClass:'cellPadding', displayName:'DATE', cellFilter:"date:'\MM/dd/yyyy\'", width:'150'},
 			{field:'title', displayName:'TITLE', cellClass:'cellPadding', width:'300'},
 			{field:'vPath', displayName:'WATCH VIDEO', cellClass:'cellPadding', cellTemplate:'<div><span ng-show="identity.currentUser.isAdmin()">{{row.entity.vPath}}</span><a class="fancybox-media" href="{{row.entity.vPath}}" ng-hide="identity.currentUser.isAdmin()"><span class="glyphicon glyphicon-play-circle"></span></a></div>', width:'150'},
-			{displayName:'MANAGE', cellTemplate:'<div ng-show="identity.currentUser.isAdmin()"><a class="btn btn-default darkGrayBG editBtn" href="/songs/updateSong/{{row.entity._id}}" >Edit</a><a class="btn btn-default darkGrayBG editBtn" href="" ng-click="deleteSong($index,row)" >DELETE</a></div>', cellClass:'cellPadding' , width:'250'}
+			{displayName:'MANAGE', cellTemplate:'<div ng-show="identity.currentUser.isAdmin()"><a class="btn btn-default darkGrayBG editBtn" href="/songs/updateSong/{{row.entity._id}}" >Edit</a><a class="btn btn-default darkGrayBG editBtn" href="" ng-click="deleteSong($index,row)" >DELETE</a></div>', cellClass:'cellPadding' , width:'250'} */
 			]
 };
 

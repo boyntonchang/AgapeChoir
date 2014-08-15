@@ -20,5 +20,5 @@ module.exports = function(config){
 	noticeModel.createDefaultNotices();
 	photoModel.createDefaultPhotos();    
 	      
-};                  
+};                    
                                                              

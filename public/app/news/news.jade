@@ -14,7 +14,8 @@
 					h3.media-heading.Ralewayh3 {{notice.title | uppercase}}
 					h5 {{notice.date | date}}
 					small.reportName {{notice.report}}
-					p.textP {{notice.content}}
+					p.textP {{notice.content }}
+					
 		.widget-foot
 			.clearfix
 			pagination(total-items='notices.length', num-pages='numPages', items-per-page='itemsPerPage', direction-links='true', max-size='maxSize', page='currentPage', boundary-links='true', ng-model='currentPage')

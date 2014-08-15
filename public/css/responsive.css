@@ -163,7 +163,12 @@
 			.dropdown-menu > li > a {
 			
 				color:#fff;
-			}	
+			}
+			.resButton{
+					margin:1em 15px;
+					float:right;
+					
+				}			
 		
 	}
 	
@@ -239,6 +244,14 @@
 				margin-top:5em;
 
 			}
+			.resButton{
+					margin:1em 15px;
+					float:right;
+					
+				}
+			.caption-style-2 li{
+				width:25%;
+			}
 	
 	}
 	
@@ -270,7 +283,7 @@
 			  }
 			  .sidebar-nav .navbar li {
 					float: left;
-					width:15%;	
+					width:16%;	
 			   
 			  }
 			  .sidebar-nav .navbar li a {
@@ -293,5 +306,10 @@
 				}
 				.margin-2{
 					margin-left: 0.5em;
+				}
+				.resButton{
+					margin:1em 15px;
+					float:right;
+					
 				}
 	}

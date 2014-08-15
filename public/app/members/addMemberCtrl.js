@@ -1,6 +1,6 @@
-angular.module('app').controller('addMemberCtrl', function($scope, mvNotifier, newMember, $location, mvUser, mvIdentity){
-	$scope.members = paMember.query();
-
+angular.module('app').controller('addMemberCtrl', function($scope, mvNotifier, newMember, $location, mvUser, mvIdentity, paMember){
+	
+	$scope.isCollapsed = true;
 	$scope.addMember = function(){
 	
 		var newMemberData = {

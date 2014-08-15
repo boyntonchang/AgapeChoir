@@ -3,9 +3,12 @@ angular.module('app').controller('memberDetailCtrl', function($scope, paMember, 
 	console.log({id:$routeParams.id});
 	$scope.identity = mvIdentity;
 	$scope.deleteMember = function (){
-		paMember.remove({id:$routeParams.id});
+		if(confirm('Are you sure this member is deleted from database?')){
+			paMember.remove({id:$routeParams.id});
 		
-		$location.path('/members');
+			$location.path('/members');
+		
+		}
 	};
 	
 	$scope.editPage = function(){
