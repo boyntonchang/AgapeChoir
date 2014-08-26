@@ -168,7 +168,15 @@
 					margin:1em 15px;
 					float:right;
 					
-				}			
+				}	
+			.MainHome img{
+				 width:100%;
+				}	
+			.MainHome{
+		
+				width:100%;
+
+			}
 		
 	}
 	
@@ -234,14 +242,11 @@
 			}
 			.MainHome{
 		
-				background-position:50% 20%;
 				
-				background-size:contain;
-				width:100%;
-				height:60%;
-				margin-left:auto;
-				margin-right:auto;
-				margin-top:5em;
+				
+				
+				
+			
 
 			}
 			.resButton{
@@ -256,7 +261,17 @@
 	}
 	
 	@media only screen and (min-width : 768px) and (max-width : 1024px) {
-			   .padding-0{
+			  .MainHome{
+		
+				
+				
+				
+				width:100%;
+				height:100%;
+			
+
+			}
+			  .padding-0{
 	   
 					padding-left:0;
 					padding-right:0;
@@ -313,3 +328,4 @@
 					
 				}
 	}
+	

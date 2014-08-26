@@ -3,12 +3,27 @@
 		button.navbar-toggle(type='button', data-toggle='collapse', data-target='#loginForm') SIGN-IN
 	div#loginForm.navbar-collapse.collapse
 		form.form-inline.navbar-form.marginTop-1.padding-0(ng-hide='identity.isAuthenticated()')
-			.form-group
-				input.form-control(type='text', ng-model='username', placeholder='username')
-			.form-group
-				input.form-control(type='password', ng-model='password', placeholder='password')
-			button.btn.btn-primary(type='submit', ng-click="signin(username, password)") Log In
-			a(class='button btn btn-info smBtn ' href='/signup') Sign Up
+			#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+				.modal-dialog
+					.modal-content
+						.modal-header.text-left
+							button.close(type='button', data-dismiss='modal')
+								span.darkGrayFont(aria-hidden='true') ×
+								span.sr-only Close
+							h4#myModalLabel.modal-title.darkGrayFont LOG IN
+						.modal-body.text-center
+							.form-group
+								input.form-control(type='text', ng-model='username', placeholder='username')
+							.form-group
+								input.form-control(type='password', ng-model='password', placeholder='password')
+						.modal-footer
+							button.btn.btn-primary(type='button', data-dismiss='modal') Cancel
+							button.btn.btn-primary(type='button', ng-click="signin(username, password)") Submit
+
+				
+				
+			button.btn.btn-primary(type='submit',  data-toggle="modal", data-target="#myModal") Log In
+			a(class='button btn btn-primary ' href='/signup') Sign Up
 	ul.nav.navbar-nav.navbar-right(ng-show='identity.isAuthenticated()')
 		li.dropdown
 			a.dropdown-toggle(href="", data-toggle='dropdown')

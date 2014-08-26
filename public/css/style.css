@@ -129,7 +129,7 @@
 		bottom:0;
 	}
 	.heightMax{
-		height:800px;
+		height:100%;
 		
 	}
 	.margin-bottom-list{
@@ -155,7 +155,7 @@
 		}
 
 	.fullHeight{
-	height:800px;
+	height:100vh;
 	}
 	
 	.padding-0{
@@ -268,6 +268,9 @@
 	.button{
 		margin-left:5px;
 	}
+	.modal-footer{
+		margin-top:0;
+	}
 
 	
 	
@@ -290,17 +293,21 @@
 	
 
 	.MainHome{
-	background-image:url('../images/agapeLogo.png');
+	/* background-image:url('../images/agapeLogo.png');
 	background-position:50% 20%;
-	background-repeat:no-repeat;
+	background-repeat:no-repeat; */
 	/* background-size:100%; */
-	width:100%;
-	height:60%;
+	width:80%;
+	height:80%;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:5em;
 	
 	
+	}
+	
+	.MainHome img{
+	 width:100%;
 	}
 	
 	/* tab */
@@ -445,7 +452,7 @@
 	
 	
 	/*-------address---------*/
-	.frameGray{
+	.memberDetail{
 		margin-bottom:	0;
 		padding:1.2em 2em;
 		border-bottom:thin #666 dotted;
@@ -477,7 +484,7 @@
 	}
 	.commentText{
 		font-size:	1.5em;
-		color:rgba(65,65,65,1);
+		color:dimgray;
 		font-style:italic;
 	}
 	
@@ -520,13 +527,20 @@
 	
 	.media-body-Frame:hover{
 		
-		background-color:#f30;
+		background-color:lightskyblue;
 		color:#fff;
 		text-decoration:none;
 	}
 	.thumbnailPic{
 		width:250px;
 		margin-bottom:10px;
+	}
+	
+	.frameGray{
+		margin-bottom:	0;
+		padding:1.2em 2em;
+		border-bottom:thin #666 dotted;
+		color:#333;
 	}
 	.frameGray:hover{
 		background-color:#f30;
@@ -537,7 +551,7 @@
 		background-color:#88b27e;
 	}
 	.reportName{
-	background-color:#2d2d2d;
+	background-color:darkgray;
 	padding:5px;
 	color:white;
 	margin:0 0 8px 0;
@@ -680,6 +694,13 @@
 /*---------------ng-grid-----------------*/
 
 .cellPadding{
-padding-top:5px;
-text-align:center;
+/* padding-top:5px; */
+	text-align:center;
+	border-bottom:thin solid #d4d4d4;
+	
+	line-height:30px;
+}
+
+.top-15{
+	top:15px;
 }

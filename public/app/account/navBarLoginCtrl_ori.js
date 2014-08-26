@@ -1,10 +1,9 @@
-angular.module('app').controller('navBarLoginCtrl', function($scope, $http, mvIdentity, mvNotifier, mvAuth, $location, $modal){
+angular.module('app').controller('navBarLoginCtrl', function($scope, $http, mvIdentity, mvNotifier, mvAuth, $location){
 	$scope.identity = mvIdentity;
 	$scope.signin = function(username, password){
 		mvAuth.authenticateUser(username, password).then(function(success){
 			if(success){
 				mvNotifier.notify('You are signed in!');
-				$('#myModal').modal('hide');
 			} else {
 				mvNotifier.notify('username and password combination incorrect');
 			}
