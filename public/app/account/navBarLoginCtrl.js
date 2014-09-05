@@ -21,4 +21,10 @@ angular.module('app').controller('navBarLoginCtrl', function($scope, $http, mvId
 			$location.path('/');
 		})
 	}
-}) 
+}); 
+
+angular.module('app').controller('LogCtrl', function($scope, $http, mvIdentity, mvNotifier, mvAuth, $location, $modal){
+	$scope.identity = mvIdentity;
+
+	
+}); 

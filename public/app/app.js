@@ -1,4 +1,4 @@
-var app=angular.module('app',['ngResource','ngRoute', 'ui.bootstrap', ,'highcharts-ng', 'ngGrid']);
+var app=angular.module('app',['ngResource','ngRoute', 'ui.bootstrap', ,'highcharts-ng', 'ngGrid', 'phoneFilter']);
 app.config(function($routeProvider, $locationProvider){
 	var routeRoleChecks = {
 		admin:{

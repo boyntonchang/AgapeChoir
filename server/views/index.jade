@@ -3,26 +3,28 @@ extends ../includes/layout
 block main-content
 	header.darkGrayBg
 		.container.headerContainer
-			.row
-				h3.col-lg-6.col-sm-6.col-xs-8.MainTitle
-					|	PILGRIM AGAPE CHOIR
+			.row(ng-controller='LogCtrl')
+				
+				button.navbar-toggle.col-xs-2.pull-left.topMargin(type='button', data-toggle='collapse', data-target='#loginForm' ng-hide='identity.isAuthenticated()') LOG
+					
+				h2.col-lg-6.col-sm-6.col-xs-8.MainTitle
+					|	AGAPE CHOIR
 					small Choir for Open Service
 					
-				
-				.col-lg-6.col-md-6.col-sm-6.text-right.padding-0(ng-include="'/partials/account/navbar-login'")
-	.row.fullHeight
-		.col-sm-12.col-md-2.heightMax.darkGrayBG 
-			.sidebar-nav
-				.nav.navbar.darkGrayBG.text-center.vertAlign(role='navigation')
-					.navbar-header
-						button.navbar-toggle(data-toggle="collapse" data-target=".sidebar-navbar-collapse" type="button")
+				button.navbar-toggle(data-toggle="collapse" data-target=".sidebar-navbar-collapse" type="button")
 							span.sr-only
 								|Toggle Navigation
 							span.icon-bar
 							span.icon-bar
 							span.icon-bar
-						span.visible-xs.navbar-brand
-							| MAIN MENU
+				.col-lg-6.col-md-6.col-sm-6.col-xs-12.text-right.padding-0(ng-include="'/partials/account/navbar-login'")
+	.row.fullHeight
+		.col-sm-12.col-md-2.heightMax.darkGrayBG 
+			.sidebar-nav
+				.nav.navbar.darkGrayBG.text-center.vertAlign(role='navigation')
+					.navbar-header
+						
+						
 					div#mainMenu.navbar-collapse.collapse.sidebar-navbar-collapse.overflowHidden(ng-controller='navigationCtrl')
 						ul.nav.nav-pills.nav-stacked
 							li

@@ -454,7 +454,7 @@
 	/*-------address---------*/
 	.memberDetail{
 		margin-bottom:	0;
-		padding:1.2em 2em;
+		padding:1.25em 1em;
 		border-bottom:thin #666 dotted;
 		color:#333;
 	}
@@ -504,7 +504,21 @@
 		padding-left: 20px;
 		font-family: Times New Roman; 
 		}
-		
+	.bottomBorder{
+		border-bottom:thin solid gray;
+	}
+	.btn-lg{
+		font-size:3em;
+	}
+	.marginTop30{
+		margin-top:30px;
+		margin-bottom:30px;
+	}
+	
+	 .btn-default:hover{
+		background-color:white;
+		color:#F15A24;
+	}
 		/*-----------songs--------------*/
 
 		
