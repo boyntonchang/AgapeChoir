@@ -1,9 +1,30 @@
 div.col-lg-10.col-md-10.col-sm-12.heightMax.padding-0.noMarginL(ng-controller='songsListCtrl')
-  div.gray.heightSM.margin-1.vertAlign
-    h2.col-sm-2.subTitle.margin0 SONGS
-    div.FloatR
-      a(class='btn btn-default editBtn darkGrayBG' , href='/AddSong', ng-show='identity.currentUser.isAdmin()') Add Song
-      // div.inline.subTitle TOTAL
-      // h2.inline.square.darkGrayBG.thinText {{songs.length}}
-  div.margin-half.height100
-    .gridStyle.overFlowX(ng-grid='gridOptions')
+	div.gray.heightSM.margin-1.vertAlign
+		h2.col-sm-2.subTitle.margin0 SONGS
+		div.FloatR
+			a(class='btn btn-default editBtn darkGrayBG' , href='/AddSong', ng-show='identity.currentUser.isAdmin()') Add Song
+      
+	div.margin-half.height100
+		table.darkGrayFont(st-table='', class='table table-hover table-striped')
+			thead
+				tr
+					th.text-center	Date
+					th.text-center	Title
+					th.text-center	Video
+					th.text-center(ng-show='identity.currentUser.isAdmin()') EDIT
+			tbody
+				tr(ng-repeat='song in songs')
+					td.cellPadding {{song.date |  date:'MM-dd-yyyy' }}
+					td.cellPadding  {{song.title}}
+					td.cellPadding
+						span(ng-show='identity.currentUser.isAdmin()'){{song.vPath}}
+						a.cellPadding.fancybox-media(href='{{song.vPath}}' ng-hide='identity.currentUser.isAdmin()')
+							i.glyphicon.glyphicon-play-circle
+					td(ng-show='identity.currentUser.isAdmin()')
+						div
+							a(class='btn btn-default editBtn darkGrayBG' , href='/songs/updateSong/{{song._id}}') Edit
+							a(class='btn btn-default editBtn darkGrayBG' , href='' , ng-click='deleteSong($index, song._id)' ) Delete
+			tfoot
+				tr
+					td.text-center(colspan='5')
+						div(st-pagination=' ', st-items-by-page="5", st-displayed-pages="7")

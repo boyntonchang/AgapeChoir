@@ -1,4 +1,4 @@
-.col-lg-10.col-md-10.col-sm-12.heightMax.padding-0.noMarginL(ng-controller='newsCtrl').padding-0
+.col-lg-10.col-md-10.col-sm-12.heightMax.padding-0.noMarginL(ng-controller='newsCtrl')
 	.gray.heightSM.margin-1.vertAlign
 		h2.col-sm-2.col-xs-2.subTitle.margin0 NEWS
 		.FloatR
@@ -6,7 +6,7 @@
 			.inline.subTitle TOTAL
 			h2.inline.square.darkGrayBG.thinText {{notices.length}}
 	.margin-half.height100
-		.media.darkGrayFont.margin0.scale-fade(ng-repeat='notice in notices ')
+		.media.darkGrayFont.margin0.scale-fade(ng-repeat='notice in filteredNotices  ')
 			a.pull-left.thumbnailPic(href='/news/{{notice._id}}')
 				img.media-object(ng-src='/images/choirPhoto/{{notice.image}}')
 			a(href='/news/{{notice._id}}')
@@ -16,7 +16,7 @@
 					small.reportName {{notice.report}}
 					p.textP {{notice.content }}
 					
-		.widget-foot
-			.clearfix
-			pagination(total-items='notices.length', num-pages='numPages', items-per-page='itemsPerPage', direction-links='true', max-size='maxSize', page='currentPage', boundary-links='true', ng-model='currentPage')
-			.clearfix
+		
+		
+		pagination(total-items='totalItems',  ng-model='currentPage', items-per-page= 'itemsPerPage', ng-changed='pageChanged()')
+		

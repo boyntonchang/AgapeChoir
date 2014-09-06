@@ -4,7 +4,7 @@ angular.module('app').controller('photosCtrl', function($scope, paPhoto, mvIdent
 
 	$scope.myInterval = 5000;
 	
-
-
+	console.log($scope.photos);
+	console.log($scope.photos.length);
 });
 	

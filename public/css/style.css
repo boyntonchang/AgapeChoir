@@ -633,9 +633,7 @@
 		padding:1em;
 		background-color:transparent;	
 	}
-	.carousel-control.left, .
-	
-	-control.right{
+	.carousel-control.left, .carousel-control.right{
 		background-image:none;	
 	}
 	.containerPhoto{
@@ -705,16 +703,24 @@
 }
 
 
-/*---------------ng-grid-----------------*/
+/*---------------smart table-----------------*/
 
 .cellPadding{
 /* padding-top:5px; */
 	text-align:center;
-	border-bottom:thin solid #d4d4d4;
+	border:thin solid #d4d4d4;
 	
 	line-height:30px;
 }
 
 .top-15{
 	top:15px;
+}
+
+tbody{
+	border-top: solid 3px gray;
+}
+
+thead{
+	background-color:lightblue;
 }

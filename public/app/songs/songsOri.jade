@@ -12,7 +12,7 @@ div.col-md-10.noMarginL(ng-controller='songsListCtrl')
           th.text-center DATE
           th.text-center SONG TITLE
           th.text-center WATCH VIDEO
-          th(class='text-center' ng-show='identity.currentUser.isAdmin()') EDIT
+          th.text-center(ng-show='identity.currentUser.isAdmin()') EDIT
       tbody.text-center.darkGrayFont
         tr(ng-repeat='song in songs | orderBy: "-date"')
           td(style='text-align:left;padding-left:2em;') 
@@ -20,9 +20,9 @@ div.col-md-10.noMarginL(ng-controller='songsListCtrl')
           td 
              {{song.title || 'empty'}}
           td
-             span(ng-show='identity.currentUser.isAdmin()'){{song.vPath}}
-             a.fancybox-media(href='{{song.vPath}}' ng-hide='identity.currentUser.isAdmin()')
-              span.glyphicon.glyphicon-play-circle
+			span(ng-show='identity.currentUser.isAdmin()'){{song.vPath}
+				a.fancybox-media(href='{{song.vPath}}' ng-hide='identity.currentUser.isAdmin()')
+					span.glyphicon.glyphicon-play-circle
           td(ng-show='identity.currentUser.isAdmin()')
             div( ng-show="!rowform.$visible")
               a(class='btn btn-default editBtn darkGrayBG' , href='/songs/updateSong/{{song._id}}') Edit

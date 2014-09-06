@@ -1,0 +1,9 @@
+div.col-lg-10.col-md-10.col-sm-12.heightMax.padding-0.noMarginL(ng-controller='songsListCtrl')
+  div.gray.heightSM.margin-1.vertAlign
+    h2.col-sm-2.subTitle.margin0 SONGS
+    div.FloatR
+      a(class='btn btn-default editBtn darkGrayBG' , href='/AddSong', ng-show='identity.currentUser.isAdmin()') Add Song
+      // div.inline.subTitle TOTAL
+      // h2.inline.square.darkGrayBG.thinText {{songs.length}}
+  div.margin-half.height100
+    .gridStyle.overFlowX(ng-grid='gridOptions')
