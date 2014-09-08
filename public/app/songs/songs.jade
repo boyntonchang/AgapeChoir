@@ -18,7 +18,7 @@ div.col-lg-10.col-md-10.col-sm-12.heightMax.padding-0.noMarginL(ng-controller='s
 					td.cellPadding  {{song.title}}
 					td.cellPadding
 						span(ng-show='identity.currentUser.isAdmin()'){{song.vPath}}
-						a.cellPadding.fancybox-media(href='{{song.vPath}}' ng-hide='identity.currentUser.isAdmin()')
+						a.cellPadding.cellPadding_no_border.fancybox-media(href='{{song.vPath}}' ng-hide='identity.currentUser.isAdmin()')
 							i.glyphicon.glyphicon-play-circle
 					td(ng-show='identity.currentUser.isAdmin()')
 						div

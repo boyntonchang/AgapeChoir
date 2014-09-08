@@ -172,6 +172,12 @@
   -webkit-transition-duration: 250ms;
   opacity: 0;
 }
+.slide-right.ng-enter-stagger, 
+.slide-right.ng-leave-stagger,
+.slide-right.ng-move-stagger {
+ -webkit-transition-delay:0.2s;
+ transition-delay:0.2s;
+}
 /* line 171, ../sass/ng-animation.scss */
 .slide-right.ng-enter-active {
   transform: translateX(0);

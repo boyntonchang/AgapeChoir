@@ -701,7 +701,9 @@
 	width:100%;
 	color:gray;
 }
-
+	.paddingR-0{
+		padding-right:0px;
+	}
 
 /*---------------smart table-----------------*/
 
@@ -709,6 +711,13 @@
 /* padding-top:5px; */
 	text-align:center;
 	border:thin solid #d4d4d4;
+	
+	line-height:30px;
+}
+
+.cellPadding_no_border{
+
+	border:0px solid transparent;
 	
 	line-height:30px;
 }

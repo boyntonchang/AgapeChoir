@@ -24,7 +24,7 @@
 		.tab-content
 			#soprano.tab-pane.active.columnCount
 				ul.caption-style-2
-					li(ng-repeat='member in members | filter:{part:"soprano"}')
+					li(ng-repeat='member in members | filter:{part:"soprano"}', class='slide-right')
 						a(href='/members/{{member._id}}')
 							img(ng-src='/images/memberPhoto/{{member.image}}')
 						.caption
@@ -33,7 +33,7 @@
 								h1 {{member.name}}
 			#alto.tab-pane
 				ul.caption-style-2
-					li(ng-repeat='member in members | filter:{part:"alto"}')
+					li(ng-repeat='member in members | filter:{part:"alto"}',class='slide-right')
 						a(href='/members/{{member._id}}')
 							img(ng-src='/images/memberPhoto/{{member.image}} ')
 						.caption
@@ -42,7 +42,7 @@
 								h1 {{member.name}}
 			#tenor.tab-pane
 				ul.caption-style-2
-					li(ng-repeat='member in members | filter:{part:"tenor"}')
+					li(ng-repeat='member in members | filter:{part:"tenor"}',class='slide-right')
 						a(href='/members/{{member._id}}')
 							img(ng-src='/images/memberPhoto/{{member.image}} ')
 						.caption
@@ -51,7 +51,7 @@
 								h1 {{member.name}}
 			#bass.tab-pane
 				ul.caption-style-2
-					li(ng-repeat='member in members | filter:{part:"bass"}')
+					li(ng-repeat='member in members | filter:{part:"bass"}',class='slide-right')
 						a(href='/members/{{member._id}}')
 							img(ng-src='/images/memberPhoto/{{member.image}} ')
 						.caption

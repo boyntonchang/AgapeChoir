@@ -1,7 +1,7 @@
 .navbar-right.responsiveMedium.padding-0(ng-controller="navBarLoginCtrl")
 	.navbar-header(ng-hide='identity.isAuthenticated()')
 		<!--button.navbar-toggle (type='button', data-toggle='collapse', data-target='#loginForm') LOG-->
-	div#loginForm.navbar-collapse.collapse
+	div#loginForm.navbar-collapse.collapse.paddingR-0
 		form.form-inline.navbar-form.marginTop-1.padding-0(ng-hide='identity.isAuthenticated()')
 			#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 				.modal-dialog

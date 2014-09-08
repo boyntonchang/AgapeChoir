@@ -6,7 +6,7 @@
 			.inline.subTitle TOTAL
 			h2.inline.square.darkGrayBG.thinText {{notices.length}}
 	.margin-half.height100
-		.media.darkGrayFont.margin0.scale-fade(ng-repeat='notice in filteredNotices  ')
+		.media.darkGrayFont.margin0.slide-right(ng-repeat='notice in filteredNotices  ')
 			a.pull-left.thumbnailPic(href='/news/{{notice._id}}')
 				img.media-object(ng-src='/images/choirPhoto/{{notice.image}}')
 			a(href='/news/{{notice._id}}')
